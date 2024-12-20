@@ -39,6 +39,7 @@ export default function Sidebar({ toggleSidebar }) {
             <FaBars onClick={handleToggle} />
           </div>
         </div>
+        <div className="sidebarLinkContainer">
         <div className="sidebarLinks">
           {menuItem.map((item, index) => (
             <NavLink 
@@ -50,6 +51,7 @@ export default function Sidebar({ toggleSidebar }) {
               <div style={{ display: isOpen ? "block" : "none" }} className="link_text">{item.name}</div>
             </NavLink>
           ))}
+        </div>
         </div>
       </div>
     </div>

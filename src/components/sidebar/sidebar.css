@@ -69,16 +69,23 @@
     cursor: pointer;
   }
   
+  .sidebarLinkContainer{
+    display: flex;
+    height: 100%;
+    flex-direction: column;
+    margin-top: 10px;
+  }
   
   .sidebar .link {
     display: flex;
     color: #fff;
-    padding: 10px 15px;
-    gap: 15px;
+    padding: 10px 17px;
+    gap: 20px;
     transition: all 0.5s;
     margin-top: 20px;
   }
   
+
   .sidebar .link:hover {
     background: lightskyblue;
     color: #000;

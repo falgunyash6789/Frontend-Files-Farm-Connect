@@ -1,0 +1,62 @@
+.containerofreel{
+  height: 100%;
+  width: 100%;
+}
+.reel-container{
+  background-color: yellow;
+  height: 700px;
+  width: 500px;
+  margin-top: 20px;
+  margin-bottom: 50px;
+  border-radius: 8px;
+}
+.r-container{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.header{
+  height: 40px;
+  width: 100px;
+  align-self: center;
+  justify-self: center;
+  margin-right: 20px;
+}
+.reel-container {
+  height: 700px; /* Set container height */
+  overflow-y: scroll; /* Vertical scrolling */
+  display: flex;
+  flex-direction: column;
+  gap: 16px; /* Space between videos */
+  padding: 10px;
+  border: 1px solid #ccc; /* Optional styling */
+  background-color: #f9f9f9; /* Optional styling */
+  scrollbar-width: none; /* For Firefox */
+-ms-overflow-style: none;
+}
+
+.reel-video {
+  width: 100%; /* Make videos responsive */
+  max-height: 700px; /* Optional: Limit video height */
+  object-fit: cover; /* Crop videos nicely */
+  border-radius: 8px; /* Optional: Rounded corners */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Optional: Shadow */
+}
+
+
+.reel-container::-webkit-scrollbar {
+  display: none; /* For Chrome, Safari, and Edge */
+}
+
+.reel-video::-webkit-media-controls {
+  display: none !important; /* Hide controls in WebKit browsers */
+}
+
+.reel-video::-webkit-media-controls-play-button,
+.reel-video::-webkit-media-controls-panel,
+.reel-video::-webkit-media-controls-timeline {
+  display: none !important; /* Specific controls to hide */
+}
+
+
+

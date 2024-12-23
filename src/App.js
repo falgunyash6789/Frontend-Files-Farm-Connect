@@ -12,6 +12,7 @@ import News from './components/news/News';
 import CropPrediction from './components/crop-prediction/CropPrediction'
 import Feed from './components/feed/Feed';
 import Land from './components/land/Land';
+import Cummunity from './components/cummunity/Cummunity';
 
 
 
@@ -33,6 +34,7 @@ function App() {
             <Route path="crop-prediction" element={<CropPrediction />} />
             <Route path="agriloop" element={<Feed />} />
             <Route path="land" element={<Land />} />  
+            <Route path="community" element={<Cummunity />} />  
             
         </Route>
       </Routes>

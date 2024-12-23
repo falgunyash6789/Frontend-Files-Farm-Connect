@@ -60,6 +60,7 @@ export const Posts = [
         userId: 1,
         like: 32,
         comment: 9,
+        dislike : 1,
     },
     {
         id: 2,
@@ -69,6 +70,7 @@ export const Posts = [
         userId: 2,
         like: 25,
         comment: 4,
+        dislike : 0,
     },
     {
         id: 3,
@@ -78,6 +80,7 @@ export const Posts = [
         userId: 3,
         like: 45,
         comment: 12,
+        dislike : 5,
     },
     {
         id: 4,
@@ -87,6 +90,7 @@ export const Posts = [
         userId: 4,
         like: 18,
         comment: 3,
+        dislike : 1,
     },
     {
         id: 5,
@@ -96,6 +100,7 @@ export const Posts = [
         userId: 5,
         like: 11,
         comment: 2,
+        dislike : 0,
     },
     {
         id: 6,
@@ -105,6 +110,7 @@ export const Posts = [
         userId: 6,
         like: 39,
         comment: 7,
+        dislike : 3,
     },
     {
         id: 7,
@@ -114,6 +120,7 @@ export const Posts = [
         userId: 7,
         like: 52,
         comment: 15,
+        dislike : 1,
     },
     {
         id: 8,
@@ -123,6 +130,7 @@ export const Posts = [
         userId: 8,
         like: 28,
         comment: 6,
+        dislike : 2,
     },
     {
         id: 9,
@@ -132,6 +140,7 @@ export const Posts = [
         userId: 9,
         like: 21,
         comment: 5,
+        dislike : 7,
     },
     {
         id: 10,
@@ -141,5 +150,6 @@ export const Posts = [
         userId: 10,
         like: 37,
         comment: 10,
+        dislike : 3,
     },
 ];

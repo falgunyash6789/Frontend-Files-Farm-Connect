@@ -2,6 +2,7 @@ import './application.css'
 import Layout from '../../components/layout/Layout'
 import PropTypes  from 'prop-types'
 import { useEffect, useState } from "react";
+import { Outlet } from 'react-router-dom';
 
 
 
@@ -74,7 +75,11 @@ export default function Application(props) {
 
 
   return (
+    <>
+    
     <Layout city={myCity}/>
+   <Outlet/>
+    </>
   )
 }
 

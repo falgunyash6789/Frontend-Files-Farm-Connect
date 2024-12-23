@@ -1,42 +1,68 @@
 import './post.css';
 import { MdMoreVert } from "react-icons/md";
+import { AiFillLike,AiFillDislike } from "react-icons/ai";
+import { FaRegComment } from "react-icons/fa";
+import { IoMdShareAlt } from "react-icons/io";
 import { Users } from "../../dummyData";
 import { useState, useRef, useEffect } from 'react';
 
 export default function Post({ post }) {
     const [like, setLike] = useState(post.like);
+    const [dislike, setDislike] = useState(post.dislike); 
     const [isLiked, setIsLiked] = useState(false);
+    const [isDisliked, setIsDisliked] = useState(false); 
     const videoRef = useRef(null);
 
     const likeHandler = () => {
-        setLike(isLiked ? like - 1 : like + 1);
+        if (!isLiked) {
+            setLike(like + 1);
+            if (isDisliked) {
+                setDislike(dislike - 1);
+                setIsDisliked(false);
+            }
+        } else {
+            setLike(like - 1);
+        }
         setIsLiked(!isLiked);
     };
 
-    const handleVideoClick = () => {
-        if (videoRef.current) {
-            if (videoRef.current.paused) {
-                videoRef.current.play();
-            } else {
-                videoRef.current.pause();
+    const dislikeHandler = () => {
+        if (!isDisliked) {
+            setDislike(dislike + 1);
+            if (isLiked) {
+                setLike(like - 1);
+                setIsLiked(false);
             }
+        } else {
+            setDislike(dislike - 1);
         }
+        setIsDisliked(!isDisliked);
     };
+
+    // const handleVideoClick = () => {
+    //     if (videoRef.current) {
+    //         if (videoRef.current.paused) {
+    //             videoRef.current.play();
+    //         } else {
+    //             videoRef.current.pause();
+    //         }
+    //     }
+    // };
 
     useEffect(() => {
         const observer = new IntersectionObserver(
             ([entry]) => {
                 if (videoRef.current) {
                     if (entry.isIntersecting) {
-                        videoRef.current.muted = false; // Unmute when in view
-                        videoRef.current.play(); // Play when in view
+                        videoRef.current.muted = false;
+                        videoRef.current.play();
                     } else {
-                        videoRef.current.muted = true; // Mute when out of view
-                        videoRef.current.pause(); // Pause when out of view
+                        videoRef.current.muted = true;
+                        videoRef.current.pause();
                     }
                 }
             },
-            { threshold: 0.5 } // Trigger when 50% of the video is visible
+            { threshold: 0.5 }
         );
 
         if (videoRef.current) {
@@ -69,34 +95,37 @@ export default function Post({ post }) {
                         <MdMoreVert className="postIcon" />
                     </div>
                 </div>
-                <div className="Center">
+                <div className="postCenter">
                     <span className="postText">{post?.desc}</span>
-                    <video
-                        autoPlay
-                        ref={videoRef}
-                        src={post.photo}
-                        className="postImg"
-                        onClick={handleVideoClick} // Handle tap/click to play/pause
-                    ></video>
-                </div>
-                <div className="postBottom">
-                    <div className="postBottomLeft">
-                        <img
-                            className="likeIcon"
-                            src="/assets/like.png"
-                            alt=""
-                            onClick={likeHandler}
-                        />
-                        <img
-                            className="likeIcon"
-                            src="/assets/heart.png"
-                            alt=""
-                            onClick={likeHandler}
-                        />
-                        <span className="postLikeCounter">{like} people like it</span>
-                    </div>
-                    <div className="postBottomRight">
-                        <span className="postCommentText">{post.comment} comments</span>
+                    <div className="videoContainer">
+                        <video
+                            autoPlay
+                            controlsList='noplaybackrate nopause noplay'
+                            controls
+                            ref={videoRef}
+                            src={post.photo}
+                            className="postVideo"
+                            
+                            
+                        ></video>
+                        <div className="videoOptions">
+                            <div className={`videoOption ${isLiked ? "iactive" : ""}`} onClick={likeHandler}>
+                                <AiFillLike className="vicon likeIcon" />
+                                <span className="optionCount">{like}</span>
+                            </div>
+                            <div className={`videoOption ${isDisliked ? "iactive" : ""}`} onClick={dislikeHandler}>
+                                <AiFillDislike className="vicon dislikeIcon"/>
+                                <span className="optionCount">{dislike}</span>
+                            </div>
+                            <div className="videoOption">
+                                <FaRegComment className="vicon commentIcon" />
+                                <span className="optionCount">{post.comment}</span>
+                            </div>
+                            <div className="videoOption">
+                                <IoMdShareAlt className="vicon shareIcon" />
+                                <span className="optionCount">Share</span>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>

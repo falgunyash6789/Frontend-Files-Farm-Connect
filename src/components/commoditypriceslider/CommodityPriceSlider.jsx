@@ -7,11 +7,11 @@ export default function CommodityPriceSlider() {
   const [error, setError] = useState('');
   
 
-  // Update dist when props.dist changes
+
  
 
   useEffect(() => {
-    // Fetching data from the API
+   
     axios.get(`https://api.data.gov.in/resource/9ef84268-d588-465a-a308-a864a43d0070?api-key=579b464db66ec23bdd000001cdd3946e44ce4aad7209ff7b23ac571b&format=json&limit=200&filters%5Bstate.keyword%5D=Maharashtra`)
       .then((response) => {
         if (response.data.records && response.data.records.length > 0) {
@@ -26,7 +26,7 @@ export default function CommodityPriceSlider() {
         setError('Error fetching data.');
         setLoading(false);
       });
-  }, []); // Re-fetch when dist changes
+  }, []); 
 
   return (
     <div className='commoditypriceslider'>

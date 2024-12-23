@@ -23,39 +23,39 @@
   margin-right: 20px;
 }
 .reel-container {
-  height: 700px; /* Set container height */
-  overflow-y: scroll; /* Vertical scrolling */
+  height: 700px; 
+  overflow-y: scroll; 
   display: flex;
   flex-direction: column;
-  gap: 16px; /* Space between videos */
+  gap: 16px; 
   padding: 10px;
-  border: 1px solid #ccc; /* Optional styling */
-  background-color: #f9f9f9; /* Optional styling */
-  scrollbar-width: none; /* For Firefox */
+  border: 1px solid #ccc; 
+  background-color: #f9f9f9; 
+  scrollbar-width: none; 
 -ms-overflow-style: none;
 }
 
 .reel-video {
-  width: 100%; /* Make videos responsive */
-  max-height: 700px; /* Optional: Limit video height */
-  object-fit: cover; /* Crop videos nicely */
-  border-radius: 8px; /* Optional: Rounded corners */
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Optional: Shadow */
+  width: 100%; 
+  max-height: 700px; 
+  object-fit: cover; 
+  border-radius: 8px; 
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); 
 }
 
 
 .reel-container::-webkit-scrollbar {
-  display: none; /* For Chrome, Safari, and Edge */
+  display: none; 
 }
 
 .reel-video::-webkit-media-controls {
-  display: none !important; /* Hide controls in WebKit browsers */
+  display: none !important; 
 }
 
 .reel-video::-webkit-media-controls-play-button,
 .reel-video::-webkit-media-controls-panel,
 .reel-video::-webkit-media-controls-timeline {
-  display: none !important; /* Specific controls to hide */
+  display: none !important; 
 }
 
 

@@ -22,7 +22,7 @@ export default function CropPrediction() {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    const mockPredictions = ["Wheat", "Rice", "Maize"]; // Replace with actual model results
+    const mockPredictions = ["Wheat", "Rice", "Maize"]; 
     setPredictions(mockPredictions);
     setResultsVisible(true);
   };

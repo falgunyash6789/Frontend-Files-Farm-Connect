@@ -10,7 +10,7 @@ import ProfileView from './components/profileview/ProfileView';
 import ProfileInput from './components/profileinput/ProfileInput';
 import News from './components/news/News';
 import CropPrediction from './components/crop-prediction/CropPrediction'
-import Agroloop from './components/agroloop/AgroLoop';
+import Feed from './components/feed/Feed';
 import Land from './components/land/Land';
 
 
@@ -31,8 +31,9 @@ function App() {
             <Route path="greenscan" element={<Greenscan />} />
             <Route path="news" element={<News />} />
             <Route path="crop-prediction" element={<CropPrediction />} />
-            <Route path="agriloop" element={<Agroloop />} />
+            <Route path="agriloop" element={<Feed />} />
             <Route path="land" element={<Land />} />  
+            
         </Route>
       </Routes>
      </BrowserRouter>

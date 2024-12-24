@@ -158,7 +158,7 @@ export const Posts = [
 export const CuPosts = [
     {
         id: 1,
-        desc: "Love For All Hatred For None.",
+        desc: "Love for the land, care for the crops, and hope for a bountiful harvest.",
         photo: "/assets/post/image (1).jpg",
         date: "5 mins ago",
         userId: 1,
@@ -175,7 +175,7 @@ export const CuPosts = [
     },
     {
         id: 3,
-        desc: "Every moment is a fresh beginning.",
+        desc: "Every moment in the field is a fresh beginning for growth and prosperity.",
         photo: "/assets/post/image (3).jpg",
         date: "20 mins ago",
         userId: 3,
@@ -184,7 +184,7 @@ export const CuPosts = [
     },
     {
         id: 4,
-        desc: "Dream big, work hard.",
+        desc: "Dream big, work hard, and see your fields bloom with abundant crops.",
         photo: "/assets/post/image (4).jpg",
         date: "30 mins ago",
         userId: 4,
@@ -201,7 +201,7 @@ export const CuPosts = [
     },
     {
         id: 6,
-        desc: "Happiness is homemade.",
+        desc: "Happiness is homemade, just like the fruits of our hard work in the fields.",
         photo: "/assets/post/image (6).jpg",
         date: "1 hour ago",
         userId: 6,
@@ -210,8 +210,8 @@ export const CuPosts = [
     },
     {
         id: 7,
-        desc: "Be yourself; everyone else is already taken.",
-        photo: "/assets/post/image (7).jpg",
+        desc: "Be yourself; every farmer has a unique way of making the land flourish.",
+        photo: "/assets/post/image (12).jpg",
         date: "2 hours ago",
         userId: 7,
         like: 52,
@@ -227,7 +227,7 @@ export const CuPosts = [
     },
     {
         id: 9,
-        desc: "Let your dreams be your wings.",
+        desc: "Let your dreams be your wings, just like the seeds we plant for a better future.",
         photo: "/assets/post/image (9).jpg",
         date: "4 hours ago",
         userId: 9,
@@ -236,7 +236,7 @@ export const CuPosts = [
     },
     {
         id: 10,
-        desc: "Stay positive, work hard, make it happen.",
+        desc: "Stay positive, work hard, and watch your crops grow and thrive with patience.",
         photo: "/assets/post/image (10).jpg",
         date: "5 hours ago",
         userId: 10,

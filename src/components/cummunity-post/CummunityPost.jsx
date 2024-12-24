@@ -50,8 +50,8 @@ export default function CommunityPost({post}) {
         </div>
         <div className="cpostBottom">
             <div className="cpostBottomLeft">
-                <img className='likeIcon' src="/assets/like.png" alt="" onClick={likeHandler}/>
-                <img className='likeIcon' src="/assets/heart.png" alt="" onClick={likeHandler}/>
+                <img className='clikeIcon' src="/assets/like.png" alt="" onClick={likeHandler}/>
+                <img className='clikeIcon' src="/assets/heart.png" alt="" onClick={likeHandler}/>
                 <span className="cpostLikeCounter">{like} people like it</span>
                 
             </div>

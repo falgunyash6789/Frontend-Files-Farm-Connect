@@ -1,6 +1,6 @@
 import './post.css';
 import { MdMoreVert } from "react-icons/md";
-import { AiFillLike,AiFillDislike } from "react-icons/ai";
+import { AiFillLike, AiFillDislike } from "react-icons/ai";
 import { FaRegComment } from "react-icons/fa";
 import { IoMdShareAlt } from "react-icons/io";
 import { Users } from "../../dummyData";
@@ -8,10 +8,11 @@ import { useState, useRef, useEffect } from 'react';
 
 export default function Post({ post }) {
     const [like, setLike] = useState(post.like);
-    const [dislike, setDislike] = useState(post.dislike); 
+    const [dislike, setDislike] = useState(post.dislike);
     const [isLiked, setIsLiked] = useState(false);
-    const [isDisliked, setIsDisliked] = useState(false); 
+    const [isDisliked, setIsDisliked] = useState(false);
     const videoRef = useRef(null);
+    const [hasUserInteracted, setHasUserInteracted] = useState(false);  
 
     const likeHandler = () => {
         if (!isLiked) {
@@ -39,30 +40,37 @@ export default function Post({ post }) {
         setIsDisliked(!isDisliked);
     };
 
-    // const handleVideoClick = () => {
-    //     if (videoRef.current) {
-    //         if (videoRef.current.paused) {
-    //             videoRef.current.play();
-    //         } else {
-    //             videoRef.current.pause();
-    //         }
-    //     }
-    // };
+    const handlePlayVideo = () => {
+        if (videoRef.current && !hasUserInteracted) {
+            videoRef.current.play().catch((error) => {
+                console.error("Video play failed: ", error);
+            });
+            setHasUserInteracted(true);  
+        }
+    };
 
+   
     useEffect(() => {
+        const handleUserInteraction = () => {
+            if (!hasUserInteracted) {
+                handlePlayVideo();
+            }
+        };
+
+        document.addEventListener('click', handleUserInteraction);
+        document.addEventListener('scroll', handleUserInteraction);
+
         const observer = new IntersectionObserver(
             ([entry]) => {
-                if (videoRef.current) {
-                    if (entry.isIntersecting) {
-                        videoRef.current.muted = false;
-                        videoRef.current.play();
-                    } else {
-                        videoRef.current.muted = true;
-                        videoRef.current.pause();
-                    }
+                if (videoRef.current && entry.isIntersecting && hasUserInteracted) {
+                    videoRef.current.play().catch((error) => {
+                        console.error("Video play failed: ", error);
+                    });
+                } else if (videoRef.current) {
+                    videoRef.current.pause();
                 }
             },
-            { threshold: 0.5 }
+            { threshold: 0.5 }  
         );
 
         if (videoRef.current) {
@@ -70,11 +78,13 @@ export default function Post({ post }) {
         }
 
         return () => {
+            document.removeEventListener('click', handleUserInteraction);
+            document.removeEventListener('scroll', handleUserInteraction);
             if (videoRef.current) {
                 observer.unobserve(videoRef.current);
             }
         };
-    }, []);
+    }, [hasUserInteracted]);  
 
     return (
         <div className="post">
@@ -97,16 +107,13 @@ export default function Post({ post }) {
                 </div>
                 <div className="postCenter">
                     <span className="postText">{post?.desc}</span>
-                    <div className="videoContainer">
+                    <div className="videoContainer" onClick={handlePlayVideo}>
                         <video
-                            autoPlay
-                            controlsList='noplaybackrate nopause noplay'
+                            controlsList="noplaybackrate nopause noplay"
                             controls
                             ref={videoRef}
                             src={post.photo}
                             className="postVideo"
-                            
-                            
                         ></video>
                         <div className="videoOptions">
                             <div className={`videoOption ${isLiked ? "iactive" : ""}`} onClick={likeHandler}>
@@ -114,7 +121,7 @@ export default function Post({ post }) {
                                 <span className="optionCount">{like}</span>
                             </div>
                             <div className={`videoOption ${isDisliked ? "iactive" : ""}`} onClick={dislikeHandler}>
-                                <AiFillDislike className="vicon dislikeIcon"/>
+                                <AiFillDislike className="vicon dislikeIcon" />
                                 <span className="optionCount">{dislike}</span>
                             </div>
                             <div className="videoOption">

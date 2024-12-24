@@ -41,7 +41,7 @@ export class News extends Component {
     const formattedDate = adjustedDate.toISOString().split('T')[0];
     console.log(formattedDate);
     //API = 57071cbb61b94e9c9f7308f4f8a13c35
-    const url = `https://newsapi.org/v2/everything?q=crops&from=${formattedDate}&sortBy=publishedAt&apiKey=&page=${page}&pageSize=20`;
+    const url = `https://newsapi.org/v2/everything?q=crops&from=${formattedDate}&sortBy=publishedAt&apiKey=57071cbb61b94e9c9f7308f4f8a13c35&page=${page}&pageSize=20`;
   
     this.setState({ loading: true });
   

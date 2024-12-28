@@ -7,35 +7,18 @@
   font-family: "Jost", sans-serif;
 }
 
-body {
-  margin: 0;
-  padding: 0;
-  width: 100%;
-  height: 100vh; /* Ensures the body takes up the full height of the viewport */
-  display: flex;
-  flex-direction: column; /* Aligns items vertically */
-  justify-content: space-between; /* Space between header, content, and footer (if any) */
-  background-color: #f5f5f5;
-}
-
 .news-container {
   padding: 20px;
-  margin: 0 auto;
-  width: 90%;
-  flex: 1; /* Ensures this container grows to fill available vertical space */
-  display: flex;
-  flex-direction: column; /* Stack child elements vertically */
+  margin-left: 10px;
+  width: 1400px;
 }
 
 .news-main-container {
-  flex: 1; /* Ensures this section stretches to occupy space */
-  display: flex;
-  flex-direction: column;
-  justify-content: center; /* Centers the content vertically */
-  align-items: center; /* Centers the content horizontally */
+  margin-top: 20px;
 }
 
 .news-heading {
+  font-family: "Jost", sans-serif;
   font-size: 32px;
   font-weight: 700;
   text-align: center;
@@ -48,15 +31,11 @@ body {
   display: flex;
   flex-wrap: wrap;
   gap: 20px;
-  justify-content: space-around;
-  width: 100%;
-  flex-grow: 1; /* Stretches row to fill space */
+  justify-content: space-between;
 }
 
 .news-col {
-  width: 100%;
-  max-width: 320px;
-  flex: 1;
+  width: 30%;
 }
 
 .card {
@@ -91,7 +70,7 @@ body {
 }
 
 .btn {
-  background-color: #69a742;
+  background-color: #69a742; /* Matching color with landing page */
   color: white;
   font-size: 14px;
   padding: 5px 10px;
@@ -101,20 +80,23 @@ body {
 }
 
 .btn:hover {
-  background-color: #4c8c2e;
+  background-color: #4c8c2e; /* Slightly darker shade for hover */
 }
 
-/* Pagination Container */
+/* Container to hold the buttons */
 .pagination-container {
   display: flex;
-  justify-content: space-between;
+  justify-content: space-between; /* This will position the buttons on the extreme left and right */
   width: 100%;
-  padding: 10px;
+  padding: 10px; /* Optional: for some spacing around buttons */
   position: relative;
 }
 
-.pagination-btn {
-  background-color: #69a742;
+/* Styling for Previous button */
+.pagination-btn.prev-btn {
+  position: absolute;
+  left: 10px; /* Positions it at the leftmost */
+  background-color: #69a742; /* Matching color with landing page */
   color: white;
   border: none;
   padding: 10px 20px;
@@ -125,35 +107,46 @@ body {
   transition: background-color 0.3s ease;
 }
 
-.pagination-btn:hover {
-  background-color: #4c8c2e;
+.pagination-btn.prev-btn:hover {
+  background-color: #4c8c2e; /* Slightly darker shade for hover */
 }
 
-.prev-btn {
+/* Styling for Next button */
+.pagination-btn.next-btn {
   position: absolute;
-  left: 10px;
+  right: 10px; /* Positions it at the rightmost */
+  background-color: #69a742; /* Matching color with landing page */
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  font-size: 18px;
+  border-radius: 50px;
+  cursor: pointer;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  transition: background-color 0.3s ease;
 }
 
-.next-btn {
-  position: absolute;
-  right: 10px;
+.pagination-btn.next-btn:hover {
+  background-color: #4c8c2e; /* Slightly darker shade for hover */
 }
 
-/* Responsive Styling */
+/* Optional: Responsive styling for smaller screens */
 @media (max-width: 768px) {
-  .news-row {
-    gap: 15px;
+  .pagination-container {
+    padding: 5px;
   }
+
+  .pagination-btn {
+    font-size: 16px;
+    padding: 8px 16px;
+  }
+
   .news-col {
     width: 48%;
   }
 }
 
 @media (max-width: 480px) {
-  .news-row {
-    flex-direction: column;
-    align-items: center;
-  }
   .news-col {
     width: 100%;
   }

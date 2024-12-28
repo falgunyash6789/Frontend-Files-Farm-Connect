@@ -76,7 +76,6 @@ export default function Application(props) {
 
   return (
     <>
-    
     <Layout city={myCity}/>
     </>
   )

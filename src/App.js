@@ -34,8 +34,7 @@ function App() {
             <Route path="crop-prediction" element={<CropPrediction />} />
             <Route path="agriloop" element={<Feed />} />
             <Route path="land" element={<Land />} />  
-            <Route path="community" element={<Cummunity />} />  
-            
+            <Route path="community" element={<Cummunity />} />    
         </Route>
       </Routes>
      </BrowserRouter>

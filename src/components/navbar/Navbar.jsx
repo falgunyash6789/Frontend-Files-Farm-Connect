@@ -56,4 +56,5 @@ Navbar.propTypes = {
   signInfo: PropTypes.string,
   name: PropTypes.string,
   Handle: PropTypes.func,
+
 };

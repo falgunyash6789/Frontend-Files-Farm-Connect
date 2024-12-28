@@ -151,7 +151,7 @@ export default function MarketAnalysis() {
 
 
       //Api = 57071cbb61b94e9c9f7308f4f8a13c35
-      const url = `https://newsapi.org/v2/everything?q=market&from=${formattedDate}&sortBy=publishedAt&apiKey=57071cbb61b94e9c9f7308f4f8a13c35&pageSize=5`;
+      const url = `https://newsapi.org/v2/everything?q=market&from=${formattedDate}&sortBy=publishedAt&apiKey=&pageSize=5`;
       const response = await fetch(url);
       const parsedData = await response.json();
       setNews(parsedData.articles || []);

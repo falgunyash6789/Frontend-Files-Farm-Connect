@@ -21,6 +21,9 @@
     justify-content: space-between;
     padding: 0 20px;
     color: white;
+    position: sticky;
+    top: 0;
+    z-index: 100;
 }
 
 .landing-page .nav-logo, .mainlogo {

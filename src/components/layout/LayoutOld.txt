@@ -3,21 +3,15 @@ import './layout.css';
 import Sidebar from '../../components/sidebar/Sidebar';
 import { Outlet } from 'react-router-dom';
 import React, { useState } from 'react';
-import PropTypes from 'prop-types';
-import { useNavigate } from 'react-router-dom';
+import PropTypes  from 'prop-types'
 
 export default function Layout(props) {
   const [isSidebarOpen, setIsSidebarOpen] = useState(false);
-  const navigate = useNavigate();
 
   const toggleSidebar = () => {
     setIsSidebarOpen(!isSidebarOpen);
   };
 
-  
-  const HandleUserClick = () =>{
-    navigate('profile-view');
-  }
   return (
     <>
       <div className={`layout ${isSidebarOpen ? 'sidebar-open' : 'sidebar-closed'}`}>
@@ -25,15 +19,8 @@ export default function Layout(props) {
           <Sidebar toggleSidebar={toggleSidebar} />
         </div>
         <div className="layoutRight">
-         
-          <div className="layoutRightTop">
-            <Navbar signInfo={"Yash Maske"} city={props.city} Handle={HandleUserClick} />
-          </div>
-
-         
-          <div className="layoutRightBottom">
-            <Outlet />
-          </div>
+          <Navbar name={"Yash Maske"} city={props.city}/>
+          <Outlet/>
         </div>
       </div>
     </>
@@ -41,6 +28,7 @@ export default function Layout(props) {
 }
 
 Layout.propTypes = {
-  city: PropTypes.string,
-  name: PropTypes.string,
-};
+    city : PropTypes.string,
+    name : PropTypes.string,
+
+  }

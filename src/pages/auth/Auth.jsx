@@ -12,6 +12,7 @@ import PropTypes  from 'prop-types'
 export default function Auth(props) {
 
   const navigate = useNavigate();
+  
 
   const HandleLogInClick = () => {
     navigate('/application/land');

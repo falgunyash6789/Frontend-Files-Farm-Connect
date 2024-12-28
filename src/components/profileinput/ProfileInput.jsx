@@ -204,7 +204,7 @@ export default function ProfileInput() {
             />
           </section>
 
-          <button type="submit" className="btn">
+          <button type="submit" className="btn btn-save">
             Save Profile
           </button>
         </form>

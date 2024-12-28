@@ -44,7 +44,7 @@ export default function Land() {
               <div className="box-content">
                 <h2>{category}</h2>
                 <div className="box-img" style={{ backgroundImage: `url(${imagess[index]})` }}></div>
-                <p>See more</p>
+                {/* <p>See more</p> */}
               </div>
             </div>
           ))}

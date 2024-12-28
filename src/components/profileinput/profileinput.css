@@ -61,7 +61,7 @@
 }
 
 /* Button Styling for Profile Page */
-.container-profile .btn {
+.container-profile .btn-save {
     padding: 12px 20px;
     background: #00796b;
     color: white;
@@ -75,7 +75,7 @@
     display: block;
 }
 
-.container-profile .btn:hover {
+.container-profile .btn-save:hover {
     background: #004d40;
     transform: scale(1.05);
 }

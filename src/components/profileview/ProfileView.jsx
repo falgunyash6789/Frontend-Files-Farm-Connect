@@ -17,6 +17,11 @@ export default function ProfileView() {
     }
   }, [navigate]); // Ensure navigate is included in the dependency array
 
+  const handleLogout = () => {
+    localStorage.removeItem("farmerData"); // Clear profile data
+    navigate("/auth"); // Redirect to login page
+  };
+
   return (
     <div className="container-profile">
       <h2>Farmer Profile</h2>
@@ -45,10 +50,16 @@ export default function ProfileView() {
         })}
       </div>
       <button
-        className="btn"
+        className="btn edit-btn"
         onClick={() => navigate("/application/profile-input")} // Redirect to profile-input on button click
       >
         Edit Profile
+      </button>
+      <button
+        className="btn logout-btn"
+        onClick={handleLogout} 
+      >
+        Logout
       </button>
     </div>
   );

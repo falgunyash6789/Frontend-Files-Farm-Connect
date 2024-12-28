@@ -1,4 +1,4 @@
-import Navbar from '../../components/navbar/Navbar';
+import NavLand from '../../components/navbarforland/NavLand';
 import Footer from '../../components/footer/Footer';
 import Land from '../../components/land/Land'
 import Auth from '../../pages/auth/Auth'
@@ -88,7 +88,7 @@ export default function LandingPage(prop) {
   const SignOut = (props) =>{
     return (
       <>
-      <Navbar city={myCity}  signInfo={props.signInfo} Handle={HandleSignInClick}/>
+      <NavLand city={myCity}  signInfo={props.signInfo} Handle={HandleSignInClick} />
       <Land/>
       <Footer/>
       </>

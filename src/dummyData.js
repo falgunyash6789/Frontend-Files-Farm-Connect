@@ -244,3 +244,37 @@ export const CuPosts = [
         comment: 10,
     },
 ];
+export const Exp = [
+    {
+        id: 1,
+        profilePicture: "/assets/experts/image (1).jpg",
+        name: "Dr. Yash Maske",
+        specialty: "Irrigation Specialist",
+        experience: "10+ years",
+        location: "Maharashtra, India",
+    },
+    {
+        id: 2,
+        profilePicture: "/assets/experts/image (2).jpg",
+        name: "Ms. Pola Foster",
+        specialty: "Crop Disease Expert",
+        experience: "8 years",
+        location: "Punjab, India",
+    },
+    {
+        id: 3,
+        profilePicture: "/assets/experts/image (3).jpg",
+        name: "Mr. John Carter",
+        specialty: "Soil Health Analyst",
+        experience: "12 years",
+        location: "Karnataka, India",
+    },
+    {
+        id: 4,
+        profilePicture: "/assets/experts/image (4).jpg",
+        name: "Ms. Sarah Ahmed",
+        specialty: "Market Analyst",
+        experience: "15 years",
+        location: "Delhi, India",
+    },
+];

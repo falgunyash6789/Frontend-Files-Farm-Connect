@@ -13,6 +13,8 @@ import CropPrediction from './components/crop-prediction/CropPrediction'
 import Feed from './components/feed/Feed';
 import Land from './components/land/Land';
 import Cummunity from './components/cummunity/Cummunity';
+import ExpertForm from './components/expert-form/ExpertForm';
+import Experts from './components/experts/Experts';
 
 
 
@@ -35,6 +37,8 @@ function App() {
             <Route path="agriloop" element={<Feed />} />
             <Route path="land" element={<Land />} />  
             <Route path="community" element={<Cummunity />} />    
+            <Route path="expert" element={<ExpertForm />} />    
+            <Route path="experts-page" element={<Experts />} />    
         </Route>
       </Routes>
      </BrowserRouter>

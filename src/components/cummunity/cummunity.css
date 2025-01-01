@@ -1,54 +1,67 @@
+/* Feed Container */
 .feed {
-    flex: 5.5;
-    height: calc(100vh - 80px); /* Occupies full height minus header */
-    overflow-y: scroll; /* Scrollable when content overflows */
     display: flex;
-    flex-direction: column; /* Stack posts vertically */
-    align-items: center;
-    justify-content: flex-start;
-    margin-top: 30px;
-    background-color: #f9f9f9; /* Optional background for better readability */
+    justify-content: center; /* Center the content horizontally */
+    align-items: flex-start; /* Align items to the top */
+    height: calc(100vh - 80px); /* Full height minus header */
+    padding: 0 20px;
+    background-color: #fafafa; /* Light background for the page */
 }
 
-::-webkit-scrollbar {
-    width: 6px; /* Thin scrollbar */
-}
-
-::-webkit-scrollbar-track {
-    background-color: #f1f1f1;
-}
-
-::-webkit-scrollbar-thumb {
-    background-color: rgb(179, 179, 179);
-    border-radius: 3px;
-}
-
-.feedWrapper {
+/* Left Wrapper (Scrollable and Centered) */
+.feedWrapperleft {
     width: 100%;
-    max-width: 600px; /* Restricts feed width for consistent layout */
-    padding: 10px 20px; /* Adds padding around posts */
-    margin-top: 20px;
+    max-width: 700px; /* Limit the width for consistency */
+    margin-right: 30px; /* Space between left and right wrappers */
+    overflow-y: scroll; /* Allow vertical scrolling */
+    height: 100%; /* Full height */
+    padding: 10px 20px;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Soft shadow effect */
 }
 
-/* Ensure video fits within the post and feed container */
-.videoContainer {
+/* Hide scrollbar but keep scroll functionality */
+.feedWrapperleft::-webkit-scrollbar {
+    width: 0px; /* Hide the scrollbar */
+}
+
+.feedWrapperleft::-webkit-scrollbar-track {
+    background: transparent; /* Transparent background */
+}
+
+.feedWrapperleft::-webkit-scrollbar-thumb {
+    background: transparent; /* Transparent thumb */
+}
+
+/* Right Wrapper (Aligned to the Right) */
+.feedWrapperRight {
     width: 100%;
-    max-width: 100%; /* Ensures video doesn't exceed the feed container width */
-    height: auto; /* Maintains aspect ratio */
-    overflow: hidden; /* Clips overflowing content */
-    border-radius: 8px; /* Matches post styling */
+    max-width: 600px; /* Limit the right side width */
+    padding: 10px 20px;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Soft shadow effect */
+    position: sticky; /* Make it sticky to the right */
+    top: 80px; /* Align with the top of the page */
 }
 
-.postVideo {
-    width: 100%; /* Video fills the container */
-    height: auto; /* Maintains proper aspect ratio */
-    object-fit: cover; /* Prevents distortion */
-}
-
-/* Responsive design for smaller screens */
+/* Media Query for Smaller Screens */
 @media screen and (max-width: 768px) {
-    .feedWrapper {
+    .feed {
+        flex-direction: column; /* Stack left and right wrappers on top of each other */
         padding: 10px;
-        max-width: 100%;
+    }
+
+    .feedWrapperleft {
+        width: 100%;
+        max-width: 100%; /* Full width on smaller screens */
+        margin-right: 0; /* No margin on smaller screens */
+    }
+
+    .feedWrapperRight {
+        width: 100%;
+        max-width: 100%; /* Full width on smaller screens */
+        margin-top: 20px; /* Space between left and right sections */
     }
 }

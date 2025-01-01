@@ -1,64 +1,75 @@
-import "./news.css";
+import './news.css';
 import { Component } from "react";
-import NewsItem from "../newsitem/NewsItem";
-import SchemesSlider from "../schemesslider/ShemeSlider";
+import NewsItem from '../newsitem/NewsItem';
+import SchemesSlider from '../schemesslider/ShemeSlider'
 
 export class News extends Component {
   constructor() {
     super();
     this.state = {
-      articles: [],
+      articles: [], // Initialize as an empty array
       loading: false,
       page: 1,
       totalResults: 0,
     };
   }
 
-  componentDidMount() {
+  async componentDidMount() {
     this.fetchArticles();
-  }
-
-  getFormattedDate() {
-    const currentDate = new Date();
-    let adjustedMonth = currentDate.getMonth() - 1;
-    let adjustedYear = currentDate.getFullYear();
-
-    if (adjustedMonth < 0) {
-      adjustedMonth = 11;
-      adjustedYear -= 1;
-    }
-
-    const adjustedDate = new Date(adjustedYear, adjustedMonth, currentDate.getDate() + 1);
-    return adjustedDate.toISOString().split("T")[0];
   }
 
   fetchArticles = async () => {
     const { page } = this.state;
-    const formattedDate = this.getFormattedDate();
-    const apiKey = "";//57071cbb61b94e9c9f7308f4f8a13c35
-    const url = `https://newsapi.org/v2/everything?q=crops&from=${formattedDate}&sortBy=publishedAt&apiKey=${apiKey}&page=${page}&pageSize=20`;
-
+  
+    // Get the current date
+    const currentDate = new Date();
+  
+    // Subtract one month while ensuring the day remains consistent
+    let adjustedMonth = currentDate.getMonth() - 1;
+    let adjustedYear = currentDate.getFullYear();
+  
+    // Handle the edge case where the month becomes negative (i.e., previous year)
+    if (adjustedMonth < 0) {
+      adjustedMonth = 11; // December
+      adjustedYear -= 1;  // Previous year
+    }
+  
+    // Create a new date object with adjusted month and current day
+    const adjustedDate = new Date(adjustedYear, adjustedMonth, currentDate.getDate() + 1);
+  
+    // Format date to YYYY-MM-DD
+    const formattedDate = adjustedDate.toISOString().split('T')[0];
+    console.log(formattedDate);
+    //API = 57071cbb61b94e9c9f7308f4f8a13c35
+    const url = `https://newsapi.org/v2/everything?q=crops&from=${formattedDate}&sortBy=publishedAt&apiKey=&page=${page}&pageSize=20`;
+  
     this.setState({ loading: true });
-
+  
     try {
-      const response = await fetch(url);
-      const data = await response.json();
-
+      const data = await fetch(url);
+      const parsedData = await data.json();
       this.setState({
-        articles: data.articles || [],
-        totalResults: data.totalResults || 0,
+        articles: parsedData.articles || [], // Ensure it's an array
+        totalResults: parsedData.totalResults || 0,
         loading: false,
       });
     } catch (error) {
-      console.error("Error fetching articles:", error);
-      this.setState({ articles: [], loading: false });
+      console.error("Error fetching data:", error);
+      this.setState({ loading: false, articles: [] }); // Fallback to an empty array on error
     }
   };
 
-  handlePageChange = (direction) => {
+  handleNextClick = async () => {
     this.setState(
-      (prevState) => ({ page: prevState.page + direction }),
-      this.fetchArticles
+      (prevState) => ({ page: prevState.page + 1 }),
+      () => this.fetchArticles()
+    );
+  };
+
+  handlePrevClick = async () => {
+    this.setState(
+      (prevState) => ({ page: prevState.page - 1 }),
+      () => this.fetchArticles()
     );
   };
 
@@ -78,7 +89,7 @@ export class News extends Component {
                 <span className="visually-hidden">Loading...</span>
               </div>
             </div>
-          ) : articles.length > 0 ? (
+          ) : articles && articles.length > 0 ? (
             <div className="news-row">
               {articles.map((article) => (
                 <div className="news-col" key={article.url}>
@@ -105,11 +116,12 @@ export class News extends Component {
             </div>
           )}
 
+          {/* Pagination */}
           <div className="pagination-container">
             <button
               type="button"
               className="pagination-btn prev-btn"
-              onClick={() => this.handlePageChange(-1)}
+              onClick={this.handlePrevClick}
               disabled={page === 1}
             >
               &larr; Previous
@@ -117,7 +129,7 @@ export class News extends Component {
             <button
               type="button"
               className="pagination-btn next-btn"
-              onClick={() => this.handlePageChange(1)}
+              onClick={this.handleNextClick}
               disabled={page >= Math.ceil(totalResults / 20)}
             >
               Next &rarr;

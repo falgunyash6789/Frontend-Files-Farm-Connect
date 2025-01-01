@@ -1,17 +1,51 @@
-.feed {
-    flex: 5.5;
-    height: calc(100vh - 80px); /* Occupies full height minus header */
-    overflow-y: scroll; /* Scrollable when content overflows */
+.feedleft {
     display: flex;
-    flex-direction: column; /* Stack posts vertically */
-    align-items: center;
-    justify-content: flex-start;
-    margin-top: 30px;
-    background-color: #f9f9f9; /* Optional background for better readability */
+    flex-direction: row; 
+    justify-content: space-between; 
+    align-items: flex-start; 
+    width: 100%; 
+    max-width: 1400px; 
+    margin: 0 auto; 
+    padding: 20px; 
+    background-color: #f9f9f9; 
+    height: calc(100vh - 40px); 
+    box-sizing: border-box; 
 }
 
+
+
+/* Posts Section (Middle) */
+.feedWrapperLeft {
+    flex: 3; 
+    max-width: 800px; 
+    /* background-color: #ffffff; Light background */
+    border-radius: 8px; /* Rounded corners */
+    /* box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); Subtle shadow */
+    padding: 20px; 
+    height: calc(100vh); 
+    overflow-y: auto; 
+    margin: 0 20px; 
+    box-sizing: border-box; 
+}
+
+
+.feedRight {
+    flex: 1; 
+    max-width: 300px; 
+    height: calc(100vh - 100px); 
+    background-color: #ffffff; 
+    border-radius: 8px; 
+    /* box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); Subtle shadow */
+    padding: 20px; 
+    overflow-y: auto; 
+    position: sticky; 
+    top: 80px; 
+    box-sizing: border-box; 
+}
+
+
 ::-webkit-scrollbar {
-    width: 6px; /* Thin scrollbar */
+    width: 8px;
 }
 
 ::-webkit-scrollbar-track {
@@ -19,36 +53,43 @@
 }
 
 ::-webkit-scrollbar-thumb {
-    background-color: rgb(179, 179, 179);
-    border-radius: 3px;
+    background-color: rgb(179, 179, 179); 
+    border-radius: 4px; 
 }
 
-.feedWrapper {
-    width: 100%;
-    max-width: 600px; /* Restricts feed width for consistent layout */
-    padding: 10px 20px; /* Adds padding around posts */
-    margin-top: 20px;
+/* Responsive Design for Smaller Screens */
+@media screen and (max-width: 1024px) {
+    .feedleft {
+        flex-direction: column; 
+    }
+
+    .sidebar,
+    .feedWrapperLeft,
+    .feedRight {
+        max-width: 100%; 
+        margin: 0; 
+        padding: 15px; 
+    }
+
+    .feedWrapperLeft {
+        margin: 20px 0; 
+    }
 }
 
-/* Ensure video fits within the post and feed container */
-.videoContainer {
-    width: 100%;
-    max-width: 100%; /* Ensures video doesn't exceed the feed container width */
-    height: auto; /* Maintains aspect ratio */
-    overflow: hidden; /* Clips overflowing content */
-    border-radius: 8px; /* Matches post styling */
-}
-
-.postVideo {
-    width: 100%; /* Video fills the container */
-    height: auto; /* Maintains proper aspect ratio */
-    object-fit: cover; /* Prevents distortion */
-}
-
-/* Responsive design for smaller screens */
 @media screen and (max-width: 768px) {
-    .feedWrapper {
-        padding: 10px;
+    .feedleft {
+        padding: 15px; 
+    }
+
+    .sidebar,
+    .feedWrapperLeft,
+    .feedRight {
         max-width: 100%;
+        margin: 0;
+        padding: 10px; 
+    }
+
+    .feedWrapperLeft {
+        margin: 10px 0; 
     }
 }

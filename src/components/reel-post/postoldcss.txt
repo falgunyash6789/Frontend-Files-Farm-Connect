@@ -1,28 +1,16 @@
-/* Post Container */
 .post {
     width: 100%;
-    max-width: 600px; /* Limit the maximum width for consistency */
     border-radius: 10px;
     box-shadow: 0px 0px 16px -8px rgba(0, 0, 0, 0.68);
-    background-color: #fff;
-    overflow: hidden;
-    display: flex;
-    align-items: center;
-    justify-content: center;
     margin: 30px;
+    background-color: #fff;
+    overflow: hidden; 
 }
 
-/* Post Wrapper */
 .postWrapper {
-    width: 100%;
-    max-width: 450px; /* Ensure consistency in width */
-    padding: 12px; /* Add internal spacing */
-    /* background-color: #fff; /* White background for contrast */
-    /* box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1); */
-    border-radius: 10px; /* Rounded corners */
+    padding: 10px;
 }
 
-/* Post Header */
 .postTop {
     display: flex;
     align-items: center;
@@ -52,7 +40,6 @@
     color: gray;
 }
 
-/* Post Content */
 .postCenter {
     margin: 10px 0;
 }
@@ -64,12 +51,11 @@
     color: #333;
 }
 
-/* Video Container */
 .videoContainer {
     position: relative;
     width: 100%;
     height: auto;
-    max-height: 80vh;
+    max-height: 80vh; 
     display: flex;
     align-items: center;
     justify-content: center;
@@ -82,10 +68,9 @@
     width: 100%;
     height: auto;
     max-height: 80vh;
-    object-fit: cover;
+    object-fit: cover; 
 }
 
-/* Video Options */
 .videoOptions {
     position: absolute;
     right: 10px;
@@ -105,10 +90,11 @@
 .videoOption.iactive .vicon {
     color: #1775ee;
 }
-
 .videoOption.iactive .optionCount {
-    font-weight: bold;
+    
+    font-weight: bold; 
 }
+
 
 .vicon {
     width: 35px;
@@ -138,31 +124,14 @@
     text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.7);
 }
 
-/* Post Bottom Right */
 .postBottomRight {
     margin-top: 10px;
 }
 
-/* Hiding Scrollbars */
-* {
-    scrollbar-width: none; /* Firefox */
-    -ms-overflow-style: none; /* Internet Explorer 10+ */
-}
 
-*::-webkit-scrollbar {
-    display: none; /* Hide scrollbar in Webkit-based browsers (Chrome, Safari) */
-}
-
-/* Mobile Responsiveness */
 @media screen and (max-width: 768px) {
     .post {
         margin: 20px;
-    }
-
-    .postWrapper {
-        width: 100%;
-        max-width: 100%; /* Ensure full width on smaller screens */
-        padding: 12px; /* Reduce padding on smaller screens */
     }
 
     .postVideo {
@@ -184,6 +153,7 @@
     }
 }
 
+
 @media screen and (max-width: 480px) {
     .post {
         margin: 15px;
@@ -191,8 +161,6 @@
     }
 
     .postWrapper {
-        width: 100%;
-        max-width: 100%;
         padding: 8px;
     }
 

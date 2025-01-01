@@ -36,17 +36,112 @@ export default function Dashboard() {
     icon: faCloudSun,
   });
 
+  const [error, setError] = useState('');
+  const [latitude, setLatitude] = useState(null);
+  const [longitude, setLongitude] = useState(null);
+  const [address, setAddress] = useState(null);
+
+  const [city, setCity] = useState("Pune"); // Default city
+  const [weatherData, setWeatherData] = useState(null);
+  const [loading, setLoading] = useState(false);
+
+  const API_END_POINT = `https://api.opencagedata.com/geocode/v1/json`;
+  const API_KEY = `69625b2257bc4e5db5ebbfe09b4c2953`;
+  const API_KEY_I = "8a4d960a43d4327a1fb9e1dff652d519";
+
   useEffect(() => {
-    setTimeout(() => {
-      setWeather({
-        temperature: "28°C",
-        condition: "Sunny",
-        wind: "12 km/h",
-        humidity: "65%",
-        icon: faCloudSun,
-      });
-    }, 1000);
+    if ('geolocation' in navigator) {
+      navigator.geolocation.getCurrentPosition(
+        (position) => {
+          const { latitude, longitude } = position.coords;
+          setLatitude(latitude);
+          setLongitude(longitude);
+        },
+        (err) => {
+          setError('Failed to fetch geolocation. Please allow location access.');
+        }
+      );
+    } else {
+      setError('Geolocation is not supported by this browser.');
+    }
   }, []);
+
+  const getUserCurrentLocation = async (latitude, longitude) => {
+    let query = `${latitude},${longitude}`;
+    let apiURL = `${API_END_POINT}?key=${API_KEY}&q=${query}&pretty=1`;
+
+    try {
+      const res = await fetch(apiURL);
+      const data = await res.json();
+
+      if (data && data.results && data.results.length > 0) {
+        const result = data.results[0];
+        const resolvedCity =
+          result.components.city || result.components.town || result.components.village;
+
+        setAddress({
+          formatted: result.formatted,
+          city: resolvedCity,
+          state: result.components.state,
+          country: result.components.country,
+          postcode: result.components.postcode,
+        });
+
+        console.log(address);
+        if (resolvedCity) {
+          setCity(resolvedCity); // Update city only if resolved
+        }
+      }
+    } catch (error) {
+      setError('Failed to fetch address data.');
+    }
+  };
+
+  useEffect(() => {
+    if (latitude && longitude) {
+      getUserCurrentLocation(latitude, longitude);
+    }
+  }, [latitude, longitude]);
+
+  const fetchWeatherData = async () => {
+    setLoading(true);
+    setError("");
+    try {
+      const response = await fetch(
+        `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${API_KEY_I}`
+      );
+      const data = await response.json();
+      if (data.cod !== 200) {
+        setError(data.message);
+        setWeatherData(null);
+      } else {
+        setWeatherData(data);
+
+        // Check if weatherData and weatherData.main are available
+        if (data && data.main) {
+          setWeather({
+            temperature: Math.floor(data.main.temp - 273.15) + "°C",
+            condition: data.weather[0].main,
+            wind: data.wind.speed + "m/s",
+            humidity: data.main.humidity + "%",
+            icon: faCloudSun,
+          });
+        }
+      }
+    } catch (err) {
+      setError("Error fetching weather data. Please try again.");
+    } finally {
+      setLoading(false);
+    }
+  };
+
+  useEffect(() => {
+    fetchWeatherData();
+  }, [city]); // Re-fetch data when the city changes
+
+  const handleOnChange = (event) => {
+    setCity(event.target.value);
+  };
 
   const cropData = {
     labels: ["Wheat", "Rice", "Corn", "Barley", "Soybean"],

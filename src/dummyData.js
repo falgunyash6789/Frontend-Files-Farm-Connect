@@ -49,6 +49,7 @@ export const Users = [
         profilePicture: "/assets/person/image (10).jpg",
         username: "Kavya Nair",
     },
+  
 ];
 
 export const Posts = [
@@ -243,6 +244,7 @@ export const CuPosts = [
         like: 37,
         comment: 10,
     },
+
 ];
 export const Exp = [
     {

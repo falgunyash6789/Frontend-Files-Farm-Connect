@@ -15,6 +15,8 @@ import Land from './components/land/Land';
 import Cummunity from './components/cummunity/Cummunity';
 import ExpertForm from './components/expert-form/ExpertForm';
 import Experts from './components/experts/Experts';
+import Dairy from './components/dairypoultry/Dairy';
+import DairyCompo from './components/dairycompo/DairyCompo';
 
 
 
@@ -39,6 +41,10 @@ function App() {
             <Route path="community" element={<Cummunity />} />    
             <Route path="expert" element={<ExpertForm />} />    
             <Route path="experts-page" element={<Experts />} />    
+            <Route path="guidance" element={<Dairy />}/>
+              
+             
+            <Route path=':id' element={<DairyCompo/>}/>
         </Route>
       </Routes>
      </BrowserRouter>

@@ -8,33 +8,42 @@ import CommodityPriceSlider from '../commoditypriceslider/CommodityPriceSlider';
 
 export default function MarketAnalysis() {
   const getRandomDateForMonth = (month, year) => {
-    // Random day between 1 and 28 (to avoid invalid dates)
-    const day = Math.floor(Math.random() * 28) + 1;
-    return new Date(year, month, day).toISOString().split("T")[0];
+    const date = new Date(year, month, 1); // First day of the month
+    const lastDay = new Date(year, month + 1, 0).getDate(); // Last day of the month
+    const randomDay = Math.floor(Math.random() * lastDay) + 1; // Random day in the month
+    date.setDate(randomDay);
+    return date.toISOString().split("T")[0]; // Return as YYYY-MM-DD
   };
   
   const getPastYearDates = () => {
     const currentDate = new Date();
     const pastYearDates = [];
-    const year = currentDate.getFullYear();
-
-    // Get the current date minus 10 days
-    currentDate.setDate(currentDate.getDate() - 10);
-    const minDate = currentDate.toISOString().split("T")[0]; // The cutoff date (10 days before today)
-
-    // Generate random dates for each month in the previous year
+    const minDate = new Date(currentDate);
+    minDate.setDate(minDate.getDate() - 10); // The cutoff date (10 days before today)
+    const minDateISO = minDate.toISOString().split("T")[0]; // Convert to ISO format
+  
     for (let i = 0; i < 12; i++) {
-      const month = (currentDate.getMonth() - i + 12) % 12;
+      const tempDate = new Date(currentDate);
+      tempDate.setMonth(tempDate.getMonth() - i); // Go back one month at a time
+      const month = tempDate.getMonth();
+      const year = tempDate.getFullYear();
+  
+      // Skip generating dates for 2025
+      if (year >= 2025) continue;
+  
       const generatedDate = getRandomDateForMonth(month, year);
-
-      // Only add the date if it's earlier than the minimum date
-      if (generatedDate < minDate) {
+  
+      // Add the date if it's earlier than the cutoff date and not from 2025
+      if (generatedDate < minDateISO && !generatedDate.startsWith("2025")) {
         pastYearDates.push(generatedDate);
       }
     }
-
-    return pastYearDates.reverse(); // We reverse so that we get dates in chronological order
+  
+    return pastYearDates.reverse(); // Dates in chronological order
   };
+  
+  console.log(getPastYearDates());
+  
 
   const [filters, setFilters] = useState({
     commodity: "Soyabean",

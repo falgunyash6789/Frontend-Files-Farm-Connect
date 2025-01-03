@@ -339,7 +339,7 @@ export const dairyData = {
         title: "Efficient Dairy Farm Management",
         description:
           "Learn the best practices to manage your dairy farm efficiently, focusing on productivity and animal welfare.",
-        images: ["/assets/dairy/dairy_management.png", "/assets/dairy/dairy_management2.jpg"],
+        images: ["/assets/dairy/dairy_management.png"],
         extraContent: [
           {
             heading: "Key Areas",
@@ -363,7 +363,7 @@ export const dairyData = {
         title: "Milk Quality Control",
         description:
           "Discover techniques to ensure high milk quality from production to storage.",
-        images: ["/assets/dairy/milk_quality.png", "/assets/dairy/milk_quality2.jpg"],
+        images: ["/assets/dairy/milk_quality.png"],
         extraContent: [
           {
             heading: "Common Issues",
@@ -387,7 +387,7 @@ export const dairyData = {
         title: "Cattle Nutrition Basics",
         description:
           "Understand the nutritional requirements of dairy cattle for optimal milk production.",
-        images: ["/assets/dairy/cattle_nutrition.png", "/assets/dairy/cattle_nutrition2.jpg"],
+        images: ["/assets/dairy/cattle_nutrition.png"],
         extraContent: [
           {
             heading: "Essential Nutrients",
@@ -411,7 +411,7 @@ export const dairyData = {
         title: "Preventing Mastitis in Cattle",
         description:
           "Mastitis is a common and costly disease in dairy farming. Learn how to prevent and manage it effectively.",
-        images: ["/assets/dairy/mastitis_prevention.png", "/assets/dairy/mastitis_prevention2.jpg"],
+        images: ["/assets/dairy/mastitis_prevention.png"],
         extraContent: [
           {
             heading: "Symptoms",
@@ -435,7 +435,7 @@ export const dairyData = {
         title: "Breeding Techniques for Dairy Cattle",
         description:
           "Explore advanced breeding techniques to enhance dairy herd productivity.",
-        images: ["/assets/dairy/breeding_techniques.png", "/assets/dairy/breeding_techniques2.jpg"],
+        images: ["/assets/dairy/breeding_techniques.png"],
         extraContent: [
           {
             heading: "Popular Techniques",
@@ -459,7 +459,7 @@ export const dairyData = {
         title: "Dairy Shed Construction Tips",
         description:
           "Build efficient and durable dairy sheds to improve productivity and ensure animal comfort.",
-        images: ["/assets/dairy/shed_construction.png", "/assets/dairy/shed_construction2.jpg"],
+        images: ["/assets/dairy/shed_construction.png"],
         extraContent: [
           {
             heading: "Key Features",
@@ -483,7 +483,7 @@ export const dairyData = {
         title: "Optimizing Milk Production",
         description:
           "Learn strategies to maximize milk production while ensuring the health of dairy cattle.",
-        images: ["/assets/dairy/milk_production.png", "/assets/dairy/milk_production2.jpg"],
+        images: ["/assets/dairy/milk_production.png"],
         extraContent: [
           {
             heading: "Key Factors",
@@ -507,7 +507,7 @@ export const dairyData = {
         title: "Silage Preparation Methods",
         description:
           "Silage is a critical feed for dairy cattle. Discover efficient preparation methods for better quality.",
-        images: ["/assets/dairy/silage_preparation.png", "/assets/dairy/silage_preparation2.jpg"],
+        images: ["/assets/dairy/silage_preparation.png"],
         extraContent: [
           {
             heading: "Importance of Silage",
@@ -531,7 +531,7 @@ export const dairyData = {
         title: "Seasonal Care for Dairy Cattle",
         description:
           "Adapt care practices for dairy cattle based on seasonal challenges to maintain productivity.",
-        images: ["/assets/dairy/seasonal_care.png", "/assets/dairy/seasonal_care2.jpg"],
+        images: ["/assets/dairy/seasonal_care.png"],
         extraContent: [
           {
             heading: "Summer Care",
@@ -555,7 +555,7 @@ export const dairyData = {
         title: "Vaccination Guide for Dairy Farms",
         description:
           "A comprehensive guide to vaccination schedules and practices for maintaining herd health.",
-        images: ["/assets/dairy/vaccination_guide.jpeg", "/assets/dairy/vaccination_guide2.jpg"],
+        images: ["/assets/dairy/vaccination_guide.jpeg"],
         extraContent: [
           {
             heading: "Common Vaccines",
@@ -580,7 +580,7 @@ export const dairyData = {
         title: "Managing Heat Stress in Cattle",
         description:
           "Discover methods to protect cattle from heat stress and maintain productivity during hot weather.",
-        images: ["/assets/dairy/heat_stress.png", "/assets/dairy/heat_stress2.jpg"],
+        images: ["/assets/dairy/heat_stress.png"],
         extraContent: [
           {
             heading: "Symptoms",
@@ -604,7 +604,7 @@ export const dairyData = {
         title: "Feeding Strategies for High Yield",
         description:
           "Explore feeding techniques to maximize milk yield while maintaining cattle health.",
-        images: ["/assets/dairy/feeding_strategies.png", "/assets/dairy/feeding_strategies2.jpg"],
+        images: ["/assets/dairy/feeding_strategies.png"],
         extraContent: [
           {
             heading: "Nutritional Requirements",
@@ -628,7 +628,7 @@ export const dairyData = {
         title: "Common Diseases in Dairy Cattle",
         description:
           "Identify and manage common diseases in dairy cattle to ensure herd health.",
-        images: ["/assets/dairy/cattle_diseases.jpg", "/assets/dairy/cattle_diseases2.jpg"],
+        images: ["/assets/dairy/cattle_diseases.jpg"],
         extraContent: [
           {
             heading: "Diseases",
@@ -652,7 +652,7 @@ export const dairyData = {
         title: "Fodder Cultivation for Dairy Farms",
         description:
           "Learn how to cultivate high-quality fodder to meet your cattle's nutritional needs.",
-        images: ["/assets/dairy/fodder_cultivation.png", "/assets/dairy/fodder_cultivation2.jpg"],
+        images: ["/assets/dairy/fodder_cultivation.png"],
         extraContent: [
           {
             heading: "Popular Crops",
@@ -676,7 +676,7 @@ export const dairyData = {
         title: "Proper Milking Techniques",
         description:
           "Follow the best milking practices to ensure hygiene and high milk quality.",
-        images: ["/assets/dairy/milking_techniques.png", "/assets/dairy/milking_techniques2.jpg"],
+        images: ["/assets/dairy/milking_techniques.png"],
         extraContent: [
           {
             heading: "Techniques",
@@ -700,7 +700,7 @@ export const dairyData = {
         title: "Calf Care and Nutrition",
         description:
           "Provide proper care and nutrition to calves to ensure their healthy growth and productivity.",
-        images: ["/assets/dairy/calf_care.png", "/assets/dairy/calf_care2.jpg"],
+        images: ["/assets/dairy/calf_care.png"],
         extraContent: [
           {
             heading: "Importance of Colostrum",
@@ -724,7 +724,7 @@ export const dairyData = {
         title: "Artificial Insemination Explained",
         description:
           "Learn about artificial insemination and its benefits for breeding high-quality dairy cattle.",
-        images: ["/assets/dairy/artificial_insemination.webp", "/assets/dairy/artificial_insemination2.jpg"],
+        images: ["/assets/dairy/artificial_insemination.webp"],
         extraContent: [
           {
             heading: "What is Artificial Insemination?",
@@ -749,7 +749,7 @@ export const dairyData = {
         title: "Waste Management in Dairy Farms",
         description:
           "Effective waste management techniques to maintain farm hygiene and utilize resources efficiently.",
-        images: ["/assets/dairy/waste_management.png", "/assets/dairy/waste_management2.jpg"],
+        images: ["/assets/dairy/waste_management.png"],
         extraContent: [
           {
             heading: "Types of Waste",
@@ -773,7 +773,7 @@ export const dairyData = {
         title: "Maintaining Hygiene in Dairy Farms",
         description:
           "Ensure cleanliness and hygiene in dairy farms to promote cattle health and high milk quality.",
-        images: ["/assets/dairy/farm_hygiene.png", "/assets/dairy/farm_hygiene2.jpg"],
+        images: ["/assets/dairy/farm_hygiene.png"],
         extraContent: [
           {
             heading: "Key Areas to Maintain",
@@ -797,7 +797,7 @@ export const dairyData = {
         title: "Best Practices for Grazing Cattle",
         description:
           "Implement grazing practices that maximize forage use and maintain cattle health.",
-        images: ["/assets/dairy/grazing_cattle.png", "/assets/dairy/grazing_cattle2.jpg"],
+        images: ["/assets/dairy/grazing_cattle.png"],
         extraContent: [
           {
             heading: "Rotational Grazing",
@@ -821,7 +821,7 @@ export const dairyData = {
         title: "Cattle Housing Design",
         description:
           "Proper cattle housing design ensures comfort, health, and productivity.",
-        images: ["/assets/dairy/housing_design.png", "/assets/dairy/housing_design2.jpg"],
+        images: ["/assets/dairy/housing_design.png"],
         extraContent: [
           {
             heading: "Key Features",
@@ -845,7 +845,7 @@ export const dairyData = {
         title: "Understanding Milk Processing",
         description:
           "Milk processing involves steps to ensure safety and quality for consumption.",
-        images: ["/assets/dairy/milk_processing.png", "/assets/dairy/milk_processing2.jpg"],
+        images: ["/assets/dairy/milk_processing.png"],
         extraContent: [
           {
             heading: "Key Steps",
@@ -868,7 +868,7 @@ export const dairyData = {
         title: "Record-Keeping for Dairy Farms",
         description:
           "Maintain detailed records to monitor farm performance and productivity.",
-        images: ["/assets/dairy/record_keeping.png", "/assets/dairy/record_keeping2.jpg"],
+        images: ["/assets/dairy/record_keeping.png"],
         extraContent: [
           {
             heading: "Benefits",
@@ -891,7 +891,7 @@ export const dairyData = {
         title: "Biosecurity Measures for Farms",
         description:
           "Protect your farm from diseases with biosecurity protocols.",
-        images: ["/assets/dairy/biosecurity.png", "/assets/dairy/biosecurity2.jpg"],
+        images: ["/assets/dairy/biosecurity.png"],
         extraContent: [
           {
             heading: "Importance",
@@ -914,7 +914,7 @@ export const dairyData = {
         title: "Emergency Care for Dairy Cattle",
         description:
           "Be prepared to handle cattle emergencies effectively to minimize losses.",
-        images: ["/assets/dairy/emergency_care.png", "/assets/dairy/emergency_care2.jpg"],
+        images: ["/assets/dairy/emergency_care.png"],
         extraContent: [
           {
             heading: "Common Emergencies",
@@ -937,7 +937,7 @@ export const dairyData = {
         title: "Choosing the Right Dairy Breed",
         description:
           "Select the right breed for optimal milk production and farm suitability.",
-        images: ["/assets/dairy/dairy_breeds.png", "/assets/dairy/dairy_breeds2.jpg"],
+        images: ["/assets/dairy/dairy_breeds.png"],
         extraContent: [
           {
             heading: "Factors to Consider",
@@ -960,7 +960,7 @@ export const dairyData = {
         title: "Manure as Fertilizer",
         description:
           "Convert cattle manure into valuable organic fertilizer for farms.",
-        images: ["/assets/dairy/manure_fertilizer.webp", "/assets/dairy/manure_fertilizer2.jpg"],
+        images: ["/assets/dairy/manure_fertilizer.webp"],
         extraContent: [
           {
             heading: "Benefits",
@@ -983,7 +983,7 @@ export const dairyData = {
         title: "Cold Storage for Milk",
         description:
           "Maintain milk quality by implementing effective cold storage solutions.",
-        images: ["/assets/dairy/cold_storage.png", "/assets/dairy/cold_storage2.jpg"],
+        images: ["/assets/dairy/cold_storage.png"],
         extraContent: [
           {
             heading: "Importance",
@@ -1006,7 +1006,7 @@ export const dairyData = {
         title: "Managing Lactation Cycles",
         description:
           "Optimize lactation cycles for higher milk yield and cattle health.",
-        images: ["/assets/dairy/lactation_cycles.jpeg", "/assets/dairy/lactation_cycles2.jpg"],
+        images: ["/assets/dairy/lactation_cycles.jpeg"],
         extraContent: [
           {
             heading: "Phases",
@@ -1029,7 +1029,7 @@ export const dairyData = {
         title: "Water Management for Dairy Farms",
         description:
           "Ensure an adequate water supply to maintain cattle health and farm operations.",
-        images: ["/assets/dairy/water_management.png", "/assets/dairy/water_management2.jpg"],
+        images: ["/assets/dairy/water_management.png"],
         extraContent: [
           {
             heading: "Importance",
@@ -1054,7 +1054,6 @@ export const dairyData = {
           "Protect your cattle and investment with comprehensive insurance policies.",
         images: [
           "/assets/dairy/cattle_insurance.png",
-          "/assets/dairy/cattle_insurance2.jpg",
         ],
         extraContent: [
           {
@@ -1079,8 +1078,7 @@ export const dairyData = {
         description:
           "Ensure cattle mobility and health by addressing lameness issues promptly.",
         images: [
-          "/assets/dairy/lameness_treatment.png",
-          "/assets/dairy/lameness_treatment2.jpg",
+          "/assets/dairy/lameness_treatment.png"
         ],
         extraContent: [
           {
@@ -1105,8 +1103,7 @@ export const dairyData = {
         description:
           "Adopt eco-friendly practices to ensure long-term farm productivity.",
         images: [
-          "/assets/dairy/sustainable_farming.png",
-          "/assets/dairy/sustainable_farming2.jpg",
+          "/assets/dairy/sustainable_farming.png"
         ],
         extraContent: [
           {
@@ -1131,8 +1128,7 @@ export const dairyData = {
         description:
           "Save costs and resources by improving energy use on your farm.",
         images: [
-          "/assets/dairy/energy_efficiency.png",
-          "/assets/dairy/energy_efficiency2.jpg",
+          "/assets/dairy/energy_efficiency.png"
         ],
         extraContent: [
           {
@@ -1157,8 +1153,7 @@ export const dairyData = {
         description:
           "Enhance productivity with automated milking systems for your dairy farm.",
         images: [
-          "/assets/dairy/automation_milking.png",
-          "/assets/dairy/automation_milking2.jpg",
+          "/assets/dairy/automation_milking.png"
         ],
         extraContent: [
           {
@@ -1183,8 +1178,7 @@ export const dairyData = {
         description:
           "Ensure the well-being of your cattle for ethical and productive farming.",
         images: [
-          "/assets/dairy/animal_welfare.png",
-          "/assets/dairy/animal_welfare2.jpg",
+          "/assets/dairy/animal_welfare.png"
         ],
         extraContent: [
           {
@@ -1209,8 +1203,7 @@ export const dairyData = {
         description:
           "Tap into international markets by exporting high-quality dairy products.",
         images: [
-          "/assets/dairy/export_dairy.png",
-          "/assets/dairy/export_dairy2.jpg",
+          "/assets/dairy/export_dairy.png"
         ],
         extraContent: [
           {
@@ -1235,8 +1228,7 @@ export const dairyData = {
         description:
           "Reduce feed expenses without compromising cattle nutrition.",
         images: [
-          "/assets/dairy/low_cost_feed.png",
-          "/assets/dairy/low_cost_feed2.jpg",
+          "/assets/dairy/low_cost_feed.png"
         ],
         extraContent: [
           {
@@ -1261,8 +1253,7 @@ export const dairyData = {
         description:
           "Boost herd productivity by optimizing cattle reproduction.",
         images: [
-          "/assets/dairy/reproductive_efficiency.jpg",
-          "/assets/dairy/reproductive_efficiency2.jpg",
+          "/assets/dairy/reproductive_efficiency.jpg"
         ],
         extraContent: [
           {
@@ -1287,8 +1278,7 @@ export const dairyData = {
         description:
           "Promote your dairy products effectively to grow your business.",
         images: [
-          "/assets/dairy/farm_marketing.png",
-          "/assets/dairy/farm_marketing2.jpg",
+          "/assets/dairy/farm_marketing.png"
         ],
         extraContent: [
           {
@@ -1313,8 +1303,7 @@ export const dairyData = {
         description:
           "Leverage technology to track and maintain cattle health effectively.",
         images: [
-          "/assets/dairy/health_monitoring.png",
-          "/assets/dairy/health_monitoring2.jpg",
+          "/assets/dairy/health_monitoring.png"
         ],
         extraContent: [
           {
@@ -1339,8 +1328,7 @@ export const dairyData = {
         description:
           "Adopt organic farming techniques to produce healthier dairy products and support sustainability.",
         images: [
-          "/assets/dairy/organic_dairy.png",
-          "/assets/dairy/organic_dairy2.jpg",
+          "/assets/dairy/organic_dairy.png"
         ],
         extraContent: [
           {
@@ -1365,8 +1353,7 @@ export const dairyData = {
         description:
           "Boost cattle health and productivity with the right minerals and supplements.",
         images: [
-          "/assets/dairy/minerals_supplements.png",
-          "/assets/dairy/minerals_supplements2.jpg",
+          "/assets/dairy/minerals_supplements.png"
         ],
         extraContent: [
           {
@@ -1391,8 +1378,7 @@ export const dairyData = {
         description:
           "Improve safety and manageability in your herd through effective dehorning techniques.",
         images: [
-          "/assets/dairy/dehorning.png",
-          "/assets/dairy/dehorning2.jpg",
+          "/assets/dairy/dehorning.png"
         ],
         extraContent: [
           {
@@ -1417,8 +1403,7 @@ export const dairyData = {
         description:
           "Invest in the right equipment to streamline your dairy farm operations.",
         images: [
-          "/assets/dairy/farm_equipment.png",
-          "/assets/dairy/farm_equipment2.jpg",
+          "/assets/dairy/farm_equipment.png"
         ],
         extraContent: [
           {
@@ -1443,8 +1428,7 @@ export const dairyData = {
         description:
           "Adopt alternative health management practices to minimize reliance on antibiotics.",
         images: [
-          "/assets/dairy/reduce_antibiotics.png",
-          "/assets/dairy/reduce_antibiotics2.jpg",
+          "/assets/dairy/reduce_antibiotics.png"
         ],
         extraContent: [
           {
@@ -1469,8 +1453,7 @@ export const dairyData = {
         description:
           "Enhance milk preservation to meet market demands and reduce waste.",
         images: [
-          "/assets/dairy/milk_shelf_life.png",
-          "/assets/dairy/milk_shelf_life2.jpg",
+          "/assets/dairy/milk_shelf_life.png"
         ],
         extraContent: [
           {
@@ -1495,8 +1478,7 @@ export const dairyData = {
         description:
           "Ensure cattle health and hygiene with proper grooming practices.",
         images: [
-          "/assets/dairy/cattle_grooming.png",
-          "/assets/dairy/cattle_grooming2.jpg",
+          "/assets/dairy/cattle_grooming.png"
         ],
         extraContent: [
           {
@@ -1521,8 +1503,7 @@ export const dairyData = {
         description:
           "Navigate market uncertainties with strategic planning and diversification.",
         images: [
-          "/assets/dairy/market_fluctuations.png",
-          "/assets/dairy/market_fluctuations2.jpg",
+          "/assets/dairy/market_fluctuations.png"
         ],
         extraContent: [
           {
@@ -1547,8 +1528,7 @@ export const dairyData = {
         description:
           "Prioritize udder health to maintain high milk quality and production levels.",
         images: [
-          "/assets/dairy/udder_health.png",
-          "/assets/dairy/udder_health2.jpg",
+          "/assets/dairy/udder_health.png"
         ],
         extraContent: [
           {
